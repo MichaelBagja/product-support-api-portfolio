@@ -7,3 +7,7 @@ I learned:
 - What an API is
 - Request vs Response
 - Why APIs are important for Product Support Engineers
+
+## Learning Progress
+
+- Day 01 completed
