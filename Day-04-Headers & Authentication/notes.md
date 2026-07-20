@@ -1,49 +1,49 @@
-# Day 2 - HTTP Headers & Authentication    
+# Day 2 - HTTP Headers & Authentication
 
-Headers is an additional information that is being send along with request or response
+Headers are additional information that is sent along with a request or response.
 
-Headers is not included with the primary data but only to provide information so client and server can communicate
+Headers are not part of the primary data. They only provide information so the client and server can communicate.
 
 Example:
-- What is the format of the data that is being sent?
-- Authentichation information
-- App info that is sending the request
+- What is the format of the data being sent?
+- Authentication information
+- App information that is sending the request
 
 ---
 
-## Header that is always being used
+## Headers that are commonly used
 
-### Content Type
+### Content-Type
 
-This header providing information of what data format that is being sent
+This header provides information about the format of the data being sent.
 
 Example:
 
-'''http
-Content-Typle: application/json
-'''
+```http
+Content-Type: application/json
+```
 
-It means that the server read the data in the format of JSON
+It means that the server reads the data in JSON format.
 
 ---
 
 ### Authorization
 
-This header being use to pove that the client have the permisiion to access API
+This header is used to prove that the client has permission to access the API.
 
 Example:
 
-'''https
-Authorization: Bearer *your_token*
-'''
+```http
+Authorization: Bearer your_token
+```
 
-If the token that is used is not valid, it will show error **401 Unauthorized**.
+If the token being used is not valid, the server will return a **401 Unauthorized** error.
 
 ---
 
-### User - Agent
+### User-Agent
 
-This providing information of what app server that is sending the request
+This header provides information about which application is sending the request.
 
 Example:
 
@@ -51,24 +51,24 @@ Example:
 User-Agent: PostmanRuntime/7.45.0
 ```
 
-Meaning that postman sending the request
+Meaning that Postman is sending the request.
 
 ---
 
-### API Authenthication
+### API Authentication
 
-Authentication itself is a prccess to make sure who is accesing the API
+Authentication is the process of making sure who is accessing the API.
 
-Methods to do this is as follows:
+Common authentication methods include:
 
-- API KEY
+- API Key
 - Bearer Token
 
 ---
 
 ## API Key
 
-This is a unique code that is being given to an app
+This is a unique code that is given to an application.
 
 It looks like this:
 
@@ -80,10 +80,9 @@ x-api-key: abc123xyz
 
 ## Bearer Token
 
-This is a token that we can get after being able to login and can be send after every request
+This is a token that can be obtained after logging in and can be sent with every request.
 
-Example: 
-
+Example:
 
 ```http
 Authorization: Bearer eyJhbGciOiJIUzI1Ni...
@@ -91,15 +90,13 @@ Authorization: Bearer eyJhbGciOiJIUzI1Ni...
 
 ---
 
-## The Difference between API Key and Bearer Token
-
-## Perbedaan API Key dan Bearer Token
+## The Difference Between API Key and Bearer Token
 
 | API Key | Bearer Token |
 |---------|--------------|
-| Identify App | Identify user |
-| More simple | More save |
-| No expiration | Can be expired |
-| Using header `x-api-key` | Using header `Authorization` |
+| Identifies the application | Identifies the user |
+| Simpler | More secure |
+| No expiration | Can expire |
+| Uses the `x-api-key` header | Uses the `Authorization` header |
 
 ---
