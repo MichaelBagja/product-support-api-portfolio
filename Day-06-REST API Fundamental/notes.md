@@ -1,6 +1,6 @@
 # REST API Fundamentals
 
-## Apa itu REST API?
+## What is REST API?
 
 REST (**Representational State Transfer**) is a *architectural style* that is used to build API so apps can communicate via HTTPS protocol 
 
